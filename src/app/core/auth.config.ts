@@ -7,7 +7,7 @@ export const authConfig: AuthConfig = {
 
     loginUrl: 'https://identityserver20200417105613.azurewebsites.net/connect/authorize',
     // URL of the SPA to redirect the user to after login
-    redirectUri: window.location.origin,
+    redirectUri: window.location.origin + '/index.html',
 
     // The SPA's id. The SPA is registered with this id at the auth-server
     clientId: 'angular_spa',
