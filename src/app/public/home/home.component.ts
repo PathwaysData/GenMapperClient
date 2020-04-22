@@ -11,7 +11,6 @@ export class HomeComponent {
     constructor(private oauthService: OAuthService) { }
 
     public login(): void {
-        this.oauthService.tryLogin();
-        console.log('login')
+        this.oauthService.initLoginFlow();
     }
 }
