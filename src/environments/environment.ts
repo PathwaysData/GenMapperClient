@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+
+    authConfig: {
+        authority: 'https://identityserver20200417105613.azurewebsites.net',
+        loginEndpoint: '/connect/authorize',
+        userEndpoint: '/connect/userinfo',
+        clientId: 'angular_spa',
+        responseType: 'code',
+        scope: 'profile openid web_api',
+    }
 };
 
 /*

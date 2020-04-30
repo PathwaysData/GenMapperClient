@@ -9,9 +9,22 @@
         Angular OAuth2 Library
     </a>
 
-    <div>
-        <button mat-raised-button
-                color="primary"
-                (click)="login()">Login</button>
-    </div>
+    <ng-container *ngIf="!isLoggedIn">
+        <div>
+            <button mat-raised-button
+                    color="primary"
+                    (click)="login()">Login</button>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="isLoggedIn">
+        <div>
+            <h3>You are logged in as <strong>[{{userInfo?.name}}]</strong></h3>
+        </div>
+        <div>
+            <button mat-raised-button
+                    color="primary"
+                    (click)="logout()">Logout</button>
+        </div>
+    </ng-container>
 </section>
