@@ -12,7 +12,7 @@ export class InitializerService {
     public load(): Promise<void> {
         this.authService.configure(authConfig);
 
-        let discoverDoc = environment.authConfig.authority;
+        let discoverDoc = authConfig.issuer;
         if (!discoverDoc.endsWith('/')) {
             discoverDoc += '/';
         }

@@ -2,16 +2,12 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { AuthConfig } from 'angular-oauth2-oidc';
+
 export const environment = {
     production: false,
-
     authConfig: {
-        authority: 'https://identityserver20200417105613.azurewebsites.net',
-        loginEndpoint: '/connect/authorize',
-        userEndpoint: '/connect/userinfo',
-        clientId: 'angular_spa',
-        responseType: 'code',
-        scope: 'profile openid web_api',
+        clientId: 'angular_spa_local'
     }
 };
 
