@@ -7,6 +7,8 @@ import { AuthConfig } from 'angular-oauth2-oidc';
 export const environment = {
     production: false,
     authConfig: {
+        // authority: 'http://localhost:5000',
+        authority: 'https://taethni-idp.azurewebsites.net',
         clientId: 'angular_spa_local'
     }
 };

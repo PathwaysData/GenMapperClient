@@ -2,10 +2,10 @@ import { AuthConfig } from 'angular-oauth2-oidc';
 import { environment } from '../../environments/environment';
 
 const config = {
-    authority: 'https://taethni-idp.azurewebsites.net',
+    authority: environment.authConfig.authority,
+    clientId: environment.authConfig.clientId,
     loginEndpoint: '/connect/authorize',
     userEndpoint: '/connect/userinfo',
-    clientId: environment.authConfig.clientId,
     responseType: 'code',
     scope: 'profile openid web_api',
 }
