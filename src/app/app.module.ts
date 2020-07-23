@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InitializerService } from './core/initializer.service';
 import { PublicModule } from './public/public.module';
+import { AuthInterceptor } from './core/auth.interceptor';
 
 @NgModule({
     declarations: [
@@ -27,6 +28,9 @@ import { PublicModule } from './public/public.module';
             multi: true,
             deps: [InitializerService, OAuthService],
             useFactory: (provider: InitializerService) => () => provider.load()
+        },
+        {
+            provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
         }
     ],
     bootstrap: [AppComponent]

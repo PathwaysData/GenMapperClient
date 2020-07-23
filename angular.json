@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "genmapper-client"
+    }
+  },
+  "defaultProject": "genmapper-client",
+  "cli": {
+    "analytics": false
+  }
 }
