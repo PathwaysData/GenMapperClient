@@ -7,11 +7,11 @@ import { AuthConfig } from 'angular-oauth2-oidc';
 export const environment = {
     production: false,
     services: {
-        // toolsApi: "https://localhost:5001",
+        // toolsApi: "https://localhost:6001",
         toolsApi: 'https://commander-example-web-app.azurewebsites.net',
     },
     authConfig: {
-        // authority: 'http://localhost:5000',
+        // authority: 'https://localhost:5001',
         authority: 'https://taethni-idp.azurewebsites.net',
         clientId: 'angular_spa_local'
     }
